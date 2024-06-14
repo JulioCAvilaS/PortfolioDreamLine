@@ -1,0 +1,102 @@
+{
+  "user": [
+    
+    {
+      "id": "1",
+      "nome": "Carol Costa",
+      "estudio": "Mestre Tattoo",
+      "endereço": "Av. das indústrias - 350, Vila Olga / Santa Luzia - MG",
+      "bio": " Gabi Costa é uma tatuadora especializada em estilo Neo Trad. Com anos de experiência, ela é responsável por eternizar qualquer animalzinho na sua pele! Além de dominar anatomia dosbichinhos,ela emprega belíssimas cores em suas obras!\nExperiência em Neo Trad, tatuagens de animais e tatuagens coloridas.",
+      "fotoperfil": "imgs/medium-shot-smiley-tattoo-artist-indoors.jpg",
+      "linkInsta": "https://www.instagram.com",
+      "linkEmail": "https://mail.google.com",
+      "linkWhatsApp": "https://www.whatsapp.com",
+      "fotos": [
+        "imgs/Old-School-Tattoos-The-Ink-Factory-5.jpg",
+        "imgs/hand-neo-1160x1431.jpg",
+        "imgs/gypsy-oldschool-tattoo.jpg",
+        "imgs/neo-traditional-tattoo-4-min.png"
+      ],
+      "estrelas": "2",
+      "foto1": "imgs/Old-School-Tattoos-The-Ink-Factory-5.jpg"
+    },
+    {
+      "id": "9c54",
+      "nome": "Gabriel Cardeal",
+      "estudio": "Cardeal Tattoo",
+      "endereço": "R. Pres. Afonso Pena - 24, Boa Esperança / Santa Luzia - MG",
+      "bio": " Gabriel Cardeal é um renomado tatuador especializado em Blackwork e Anime Tattoo. Com habilidade excepcional, ele transforma sua paixão por arte em tinta, criando designs marcantes e detalhados. Seu estilo único e sua precisão técnica tornam suas tatuagens verdadeiras obras de arte.",
+      "fotoperfil": "imgs/medium-shot-smiley-tattoo-artist-indoors.jpg",
+      "linkInsta": "https://www.instagram.com",
+      "linkEmail": "https://mail.google.com",
+      "linkWhatsApp": "https://www.whatsapp.com",
+      "fotos": [
+        "imgs/Old-School-Tattoos-The-Ink-Factory-5.jpg",
+        "imgs/hand-neo-1160x1431.jpg",
+        "imgs/gypsy-oldschool-tattoo.jpg",
+        "imgs/neo-traditional-tattoo-4-min.png"
+      ],
+      "estrelas": "2"
+    },
+    {
+      "id": "a77e",
+      "bio": "",
+      "email": "usuario1@gmail.com",
+      "end": "",
+      "exp": "",
+      "face": "",
+      "insta": "",
+      "nascimento": "27",
+      "nome": "",
+      "senha": "kkkkkkk",
+      "tipo": "cliente",
+      "categoria": "Neo Trad",
+      "foto": "Imagens/neotrad.jpeg"
+    },
+    {
+      "id": "cd07",
+      "email": "claudio@gmail.com",
+      "senha": "151515",
+      "nascimento": "1995-05-15",
+      "tipo": "cliente",
+      "nome": "",
+      "bio": "",
+      "exp": "",
+      "end": "",
+      "insta": "",
+      "face": "",
+      "categoria": "",
+      "foto": ""
+    },
+    {
+      "id": "51a5",
+      "email": "claudio@gmail.com",
+      "senha": "151515",
+      "nascimento": "1995-05-15",
+      "tipo": "cliente",
+      "nome": "",
+      "bio": "",
+      "exp": "",
+      "end": "",
+      "insta": "",
+      "face": "",
+      "categoria": "",
+      "foto": ""
+    },
+    {
+      "id": "5154",
+      "email": "rwesraga@gmail.com",
+      "senha": "051515",
+      "nascimento": "2005-12-02",
+      "tipo": "cliente",
+      "nome": "",
+      "bio": "",
+      "exp": "",
+      "end": "",
+      "insta": "",
+      "face": "",
+      "categoria": "",
+      "foto": ""
+    }
+  ]
+}

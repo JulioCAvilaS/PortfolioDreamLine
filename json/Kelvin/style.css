@@ -1,0 +1,35 @@
+body{
+    background-color: aliceblue;
+   
+}
+.av {
+    font-family: Avestrava;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    font-size: 80px; color: black;
+}
+.container-fluid{
+    background-color: #0F0F0F;
+}
+.bg-white{
+    border-radius: 30px;
+}
+img {
+    border-radius: 10px;
+}
+@font-face {
+    font-family: Avestrava;   
+src: url("Avestrava\ Regular\ Personal\ Use\ Only.ttf");
+}
+.foto-perfil {
+    width: 100%;
+    border-radius: 25px;
+}
+.titulo {
+
+    font-family: Avestrava;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    font-size: 100px; color: black;
+    src: url("Avestrava\ Regular\ Personal\ Use\ Only.ttf");
+}

@@ -1,0 +1,215 @@
+function leDados() {
+    let strDados = localStorage.getItem('db');
+    let objDados = "";
+    if (strDados) {
+        objDados = JSON.parse(strDados);
+    }
+    else {
+        objDados = { perfis: [] };
+    }
+
+    return objDados;
+}
+
+function salvaDados(dados) {
+    localStorage.setItem('db', JSON.stringify(dados));
+}
+
+function validaMail(mail) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(mail);
+}
+function emailExistente(mail, perfis) {
+    return perfis.some(perfil => perfil.email === mail);
+}
+function campoEstaVazio(valor) {
+    return valor.trim() === '';
+}
+
+
+
+function incluirPerfil() {
+
+    // Ler os dados do localStorage
+    let objDados = leDados();
+
+    // Incluir um novo perfil
+    let strMail = document.getElementById('e-mail').value;
+    
+    if (!validaMail(strMail)) {
+        alert('Por favor, insira um email válido.');
+        return;
+    }
+    
+    // Verificar se o email já existe
+    if (emailExistente(strMail, objDados.perfis)) {
+        alert('Este email já está registrado.');
+        return;
+    }
+    
+
+    let strSenha = document.getElementById('senha').value;
+    let strConfirmarSenha = document.getElementById('confirmaSenha').value;
+    let strNascimento = document.getElementById('nascimento').value;
+    let strTipo = document.getElementById('tipo').value;
+    
+    // Verificar se algum campo obrigatório está vazio
+    if (campoEstaVazio(strMail) || campoEstaVazio(strSenha) || campoEstaVazio(strNascimento) || campoEstaVazio(strTipo)) {
+        alert('Por favor, preencha todos os campos obrigatórios.');
+        return;
+    }
+    
+    // Verificar se as senhas são iguais
+    if (strSenha !== strConfirmarSenha) {
+        alert('As senhas são diferentes. Por favor, digite a mesma senha.');
+        return;
+    }
+    alert("manfsnvds");
+    let strNome = "";
+    let strBio = "";
+    let strExp = "";
+    let strEnd = "";
+    let strInsta = "";
+    let strFace = "";
+
+    let novoPerfil = {
+        email: strMail,
+        senha: strSenha,
+        nascimento: strNascimento,
+        tipo: strTipo,
+        nome: strNome,
+        bio: strBio,
+        exp: strExp,
+        end: strEnd,
+        insta: strInsta,
+        face: strFace,
+
+    };
+    objDados.perfis.push(novoPerfil);
+
+
+
+
+    // Salvar os dados no localStorage novamente
+    salvaDados(objDados);
+
+    // Atualiza os dados da tela
+    alert('Perfil incluído com sucesso!');
+
+}
+
+document.getElementById('form').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    const id = "2";
+    const email = document.getElementById('e-mail').value;
+    const senha = document.getElementById('senha').value;
+    const nascimento = document.getElementById('nascimento').value;
+    const tipo = document.getElementById('tipo').value;
+    let nome = "";
+    let bio = "";
+    let exp = "";
+    let end = "";
+    let insta = "";
+    let face = "";
+
+    
+
+    const response = await fetch('http://localhost:3000/users', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({id ,email, senha, nascimento, tipo, nome, bio, exp, end, insta, face })
+    });
+
+    if (response.ok) {
+        alert('Usuário registrado com sucesso!');
+    } else {
+        alert('Erro ao registrar usuário');
+    }
+});
+
+
+async function atualizaFotos() {
+    try {
+        // Faz a requisição para obter os dados do db.json
+        const response = await fetch('http://localhost:3000/user?fotos/foto');
+        if (!response.ok) {
+            throw new Error('Erro ao buscar as fotos');
+        }
+
+        const data = await response.json();
+        const photos = data.photos;
+        
+        // Atualiza o atributo 'src' de cada imagem com a URL correspondente
+        document.getElementById('photo1').src = photos[0].url;
+        document.getElementById('photo2').src = photos[1].url;
+        document.getElementById('photo3').src = photos[2].url;
+    } catch (error) {
+        console.error('Erro ao atualizar as fotos:', error);
+    }
+}
+
+// Chama a função para atualizar as fotos quando a página carrega
+window.onload = atualizaFotos;
+
+
+
+window.onload = async function () {
+    const url = 'http://localhost:3000/users?foto1'
+    const response = await fetch(url)  
+    const foto = await response.json()
+    imprimeDados()
+
+};
+
+function imprimeDados(data) {
+    const foto1 = document.getElementById('photo1');
+    const foto2 = document.getElementById('photo2');
+    const foto3 = document.getElementById('photo3');
+    
+    // Extrair as fotos do objeto data
+    const { foto1: Foto1, foto2: Foto2, foto3: Foto3 } = data[0];
+
+    // Atribuir o conteúdo HTML com os links das fotos
+    foto1.innerHTML = `<img src="${Foto1}" alt="Foto" class="foto-perfil"/>`;
+    foto2.innerHTML = `<img src="${Foto2}" alt="Foto" class="foto-perfil"/>`;
+    foto3.innerHTML = `<img src="${Foto3}" alt="Foto" class="foto-perfil"/>`;
+}
+
+
+
+
+cadastro
+document.getElementById('form').addEventListener('submit', async function (event) {
+    event.preventDefault();
+    const id = "2";
+    const email = document.getElementById('e-mail').value;
+    const senha = document.getElementById('senha').value;
+    const nascimento = document.getElementById('nascimento').value;
+    const tipo = document.getElementById('tipo').value;
+    let nome = "";
+    let bio = "";
+    let exp = "";
+    let end = "";
+    let insta = "";
+    let face = "";
+    let categoria = "";
+    let foto = "";
+
+
+
+    const response = await fetch('http://localhost:3000/users', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ id, email, senha, nascimento, tipo, nome, bio, exp, end, insta, face, categoria, foto })
+    });
+
+    if (response.ok) {
+        alert('Usuário registrado com sucesso!');
+    } else {
+        alert('Erro ao registrar usuário');
+    }
+});
