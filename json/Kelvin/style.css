@@ -1,35 +1,138 @@
-body{
-    background-color: aliceblue;
-   
+.content{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    height: 400vh;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%), 
+        url(Imagens/process-creating-new-tattoo-young-woman-by-expirienced-tattoo-artist-studio.jpg) no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.background2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400vh;
+    background-color: #000000;
+    background-size: cover;
+    z-index: -2;
 }
 .av {
     font-family: Avestrava;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: white;
-    font-size: 80px; color: black;
+    font-size: 80px;
+    color: black;
 }
-.container-fluid{
+.sobreAV{
+    font-family: Avestrava;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    font-size: 700%;
+    color: black;
+}
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+p{
+    font-size: 16;
+}
+.conteudo {
     background-color: #0F0F0F;
 }
-.bg-white{
+
+.bg-white {
     border-radius: 30px;
 }
+
 img {
     border-radius: 10px;
 }
+
 @font-face {
-    font-family: Avestrava;   
-src: url("Avestrava\ Regular\ Personal\ Use\ Only.ttf");
+    font-family: Avestrava;
+    src: url("Avestrava\ Regular\ Personal\ Use\ Only.ttf");
 }
+
 .foto-perfil {
     width: 100%;
     border-radius: 25px;
 }
+
 .titulo {
 
     font-family: Avestrava;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: white;
-    font-size: 100px; color: black;
+    font-size: 100px;
+    color: black;
     src: url("Avestrava\ Regular\ Personal\ Use\ Only.ttf");
+}
+.tituloAV{
+    font-family: Avestrava;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+    font-size: 1200%;
+    margin: 0%;
+    color: black;
+    src: url("Avestrava\ Regular\ Personal\ Use\ Only.ttf");
+}
+.subT{
+    margin-top: 2%;
+    z-index: 3;
+    color: BLACK; 
+}
+.pSobre{
+    color: white;
+}
+.card-refs{
+    background: 
+        linear-gradient(rgb(255, 255, 255) 60%, rgb(15, 15, 15) );
+    border-radius: 25px;
+
+}
+.main{
+    padding-top: 30%;
+}
+
+.estilos{
+padding-top: 5%;
+}
+
+.wrapper{
+height: auto;
+display: flex;
+overflow-x: auto;
+}
+
+.wrapper::-webkit-scrollbar{
+    width: 0px;
+}
+
+.wrapper .item{
+    padding-right: 100px;
+    min-width: 300px;
+    max-height:600px;
+    background-color: antiquewhite;
+    margin-right: 2px;
+    border-radius: 25px;
+}
+
+.imagens-carrossel{
+    border-radius: 25px;
 }

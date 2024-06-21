@@ -1,0 +1,85 @@
+body{
+    background-color: aliceblue;
+}
+.container-fluid{
+    background-color: #0F0F0F;
+}
+.bg-white{
+    border-radius: 30px;
+}
+#layuot{
+    width: 858px;
+height: 199px;
+top: 156px;
+left: 291px;
+gap: 0px;
+border: 15px 0px 0px 0px;
+opacity: 0px;
+
+}
+
+#nome{
+    font-family: Avestrava;
+    font-size: 180px;
+font-weight: 400;
+line-height: 181.62px;
+text-align: center;
+color: #0F0F0F;
+opacity: 0px;
+-webkit-text-stroke-width: 3px;
+-webkit-text-stroke-color: white;
+font-weight: 400;
+}
+
+@font-face {
+    font-family: Avestrava;
+    
+    src: url("Avestrava\ Regular\ Personal\ Use\ Only.ttf");
+}
+
+.card{
+    display: inline-block;
+}
+
+div.divimg1{
+    display: inline-block;
+    max-width: 100%;
+max-height: 100%;
+}
+
+div.imagens{
+    display: inline-block;
+    width: 10px;
+}
+
+#img1{
+    width: 200px;
+    height: 200px;
+}
+#img2{
+    width: 100px;
+    height: 100px;
+}
+#img3{
+    width: 100px;
+    height: 100px;
+}
+
+@font-face {
+    font-family: Montserrat;
+    
+    src: url("Montserrat-VariableFont_wght.ttf");
+}
+
+#titulo{
+    font-family: Montserrat;
+    color: white;
+    font-size: 36px;
+    line-height: 60px;
+}
+
+#subtitulo{
+    font-family: Montserrat;
+    color: white;
+}
+
